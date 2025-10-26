@@ -14,7 +14,7 @@ RUN mkdir -p /var/run/sshd && \
 
 # Set root password for testing
 # KILL THIS FOR PROD PLEASE
-RUN echo 'root:root' | chpasswd
+# RUN echo 'root:root' | chpasswd
 
 # Allow root login
 RUN sed -i 's/#PermitRootLogin.*/PermitRootLogin yes/' /etc/ssh/sshd_config && \
